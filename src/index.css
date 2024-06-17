@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Swiper Pagination */
+.swiper-pagination-bullet {
+	background: #fcfcfc !important; /* Color for inactive bullets */
+	opacity: 0.7;
+	transition: opacity 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+	background: #000 !important; /* Color for active bullet */
+	opacity: 1;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+	display: none;
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: black; /* Color of the scrollbar thumb */
+	border-radius: 0; /* Square corners */
+}
+
+body::-webkit-scrollbar-track {
+	background-color: transparent; /* Background of the scrollbar track */
+}
