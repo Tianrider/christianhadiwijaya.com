@@ -16,16 +16,17 @@ function projects() {
 					Selected Works
 				</motion.h1>
 				<Swiper />
-				<motion.div
-					className="font-bold mt-[4vh] mb-[10vh] text-xl cursor-pointer flex flex-row items-center justify-center"
+				<motion.a
+					className="font-bold mt-[4vh] mb-[10vh] text-xl cursor-pointer flex flex-row items-center justify-center hover:underline transition-all duration-150 ease-in-out"
 					initial={{opacity: 0, x: -50}}
 					whileInView={{opacity: 1, x: 0}}
 					viewport={{margin: "-20%", once: true}}
 					transition={{duration: 0.3}}
+					href="/works"
 				>
 					<p> show all projects</p>
 					<FaArrowRight className="ml-1 text-sm" />
-				</motion.div>
+				</motion.a>
 			</div>
 		</div>
 	);

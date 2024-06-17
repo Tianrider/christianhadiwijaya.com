@@ -39,32 +39,40 @@ function SwiperFunc() {
 						slidesPerView: 2,
 					},
 				}}
-				className="w-[90vw] mt-[3	vh]"
-				initialSlide={1} // Set the initial slide index here
+				className="w-[90vw] mt-[3vh]"
+				initialSlide={0} // Set the initial slide index here
 				modules={[EffectCoverflow, Pagination, Mousewheel]}
 			>
 				<SwiperSlide className="flex justify-center items-center align-center">
-					<div className=" h-full w-[90dvw] md:w-[55vw]">
+					<a
+						className=" h-full w-full md:w-[55vw]"
+						href="https://nutritify.vercel.app/"
+						target="_blank"
+					>
 						<img
-							src="https://th.bing.com/th/id/OIP.wUEpMhbsibxsOh7oOq8SEgHaEo?rs=1&pid=ImgDetMain"
+							src="https://res.cloudinary.com/djvdforcq/image/upload/v1718638748/Copy_of_drop-down_4_wsryqx.png"
+							alt="Slide 1"
+							className="h-full w-full object-cover"
+						/>
+					</a>
+				</SwiperSlide>
+				<SwiperSlide className="flex justify-center items-center align-center">
+					<a
+						className=" h-full w-[90dvw] md:w-[55vw]"
+						href="https://github.com/Tianrider/mrt-location_be"
+						target="_blank"
+					>
+						<img
+							src="https://res.cloudinary.com/djvdforcq/image/upload/v1718637173/Copy_of_drop-down_1_odyhby.png"
 							alt="Slide 1"
 							className="object-cover h-full w-full"
 						/>
-					</div>
+					</a>
 				</SwiperSlide>
 				<SwiperSlide className="flex justify-center items-center align-center">
 					<div className=" h-full w-[90dvw] md:w-[55vw]">
 						<img
-							src="https://th.bing.com/th/id/OIP.wUEpMhbsibxsOh7oOq8SEgHaEo?rs=1&pid=ImgDetMain"
-							alt="Slide 1"
-							className="object-cover h-full w-full"
-						/>
-					</div>
-				</SwiperSlide>
-				<SwiperSlide className="flex justify-center items-center align-center">
-					<div className=" h-full w-[90dvw] md:w-[55vw]">
-						<img
-							src="https://th.bing.com/th/id/OIP.wUEpMhbsibxsOh7oOq8SEgHaEo?rs=1&pid=ImgDetMain"
+							src="https://res.cloudinary.com/djvdforcq/image/upload/v1718638463/Copy_of_drop-down_3_dzobiy.png"
 							alt="Slide 1"
 							className="object-cover h-full w-full"
 						/>
