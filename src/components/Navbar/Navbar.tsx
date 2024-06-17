@@ -5,7 +5,12 @@ import whiteLogo from "../Navbar/assets/CH-logo-white.svg";
 import {motion} from "framer-motion";
 import xIcon from "../Navbar/assets/x-exit.svg";
 
-function Navbar({showNav, setShowNav}) {
+interface NavbarProps {
+	showNav: boolean;
+	setShowNav: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+function Navbar({showNav, setShowNav}: NavbarProps) {
 	return (
 		<>
 			<div className="fixed bg-transparant pt-[5vw] px-[5vw] pr-[10vw] md:p-10 md:px-20 w-screen flex items-center justify-between z-50">

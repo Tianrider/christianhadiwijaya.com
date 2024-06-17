@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import imageList from "../data/galleryData";
-import {motion} from "framer-motion";
 import Reveal from "../components/Reveal/Reveal";
 
 const Gallery: React.FC = () => {
