@@ -3,7 +3,7 @@ import {motion} from "framer-motion";
 import {FaInstagram, FaGithub, FaLinkedin} from "react-icons/fa";
 import {MdEmail} from "react-icons/md";
 import hLogo from "./assets/H-logo.svg";
-import cvIcon from "./assets/cv-icon.svg";
+// import cvIcon from "./assets/cv-icon.svg";
 
 interface IconProps {
 	id: string;
