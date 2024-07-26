@@ -1,4 +1,4 @@
-import profilePicture from "../AboutMe/assets/NJ_BubbleGum_14.jpg";
+import profilePicture from "../AboutMe/assets/ProfilePicture.jpg";
 
 function aboutMe() {
 	return (
@@ -52,7 +52,7 @@ function aboutMe() {
 				<img
 					src={profilePicture}
 					alt=""
-					className="h-80 w-60 md:mb-0 mb-5"
+					className="h-80 aspect-auto md:mb-0 mb-5 rounded-md shadow-md"
 				/>
 			</div>
 		</div>

@@ -58,9 +58,27 @@ function Footer() {
 							Social
 						</p>
 						<div className="flex flex-row gap-[12dvw] md:gap-14 font-sans font-bold mt-[2dvw] md:mt-4 text-[5dvw] md:text-[25px]">
-							<p>Linkedin</p>
-							<p>GitHub</p>
-							<p>Instagram</p>
+							<a
+								className="cursor-pointer hover:underline"
+								href="https://www.linkedin.com/in/christianhadiwijaya/"
+								target="_blank"
+							>
+								Linkedin
+							</a>
+							<a
+								className="cursor-pointer hover:underline"
+								href="https://www.github.com/Tianrider"
+								target="_blank"
+							>
+								GitHub
+							</a>
+							<a
+								className="cursor-pointer hover:underline"
+								href="https://www.instagram.com/tianhd_"
+								target="_blank"
+							>
+								Instagram
+							</a>
 						</div>
 					</div>
 				</div>

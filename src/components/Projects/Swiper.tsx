@@ -45,7 +45,7 @@ function SwiperFunc() {
 			>
 				<SwiperSlide className="flex justify-center items-center align-center">
 					<a
-						className=" h-full w-full md:w-[55vw]"
+						className="h-full w-full md:w-[55vw]"
 						href="https://nutritify.vercel.app/"
 						target="_blank"
 					>
@@ -58,7 +58,7 @@ function SwiperFunc() {
 				</SwiperSlide>
 				<SwiperSlide className="flex justify-center items-center align-center">
 					<a
-						className=" h-full w-[90dvw] md:w-[55vw]"
+						className="h-full w-[90dvw] md:w-[55vw]"
 						href="https://github.com/Tianrider/mrt-location_be"
 						target="_blank"
 					>
@@ -70,7 +70,7 @@ function SwiperFunc() {
 					</a>
 				</SwiperSlide>
 				<SwiperSlide className="flex justify-center items-center align-center">
-					<div className=" h-full w-[90dvw] md:w-[55vw]">
+					<div className="h-full w-[90dvw] md:w-[55vw]">
 						<img
 							src="https://res.cloudinary.com/djvdforcq/image/upload/v1718638463/Copy_of_drop-down_3_dzobiy.png"
 							alt="Slide 1"

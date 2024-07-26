@@ -2,7 +2,7 @@ import {motion} from "framer-motion";
 
 function mainPage() {
 	return (
-		<div className="bg-white h-[100vh] md:h-screen flex flex-col justify-end">
+		<div className="bg-white h-[100vh] md:h-screen flex flex-col justify-end relative">
 			<motion.div
 				className="textbox ml-[8dvw] mb-[25vh] md:ml-20 md:mb-60 absolute w-screen md:w-1/2"
 				initial={{opacity: 0, y: 30}}

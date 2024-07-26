@@ -55,17 +55,61 @@ const WorksImgLeft: React.FC<WorksImgLeftProps> = ({
 				<div className="flex flex-row justify-start items-center gap-5">
 					{link && (
 						<a href={link} target="_blank">
-							<div className="text-white bg-black bg-opacity-90 rounded-md md:hover:bg-opacity-100 flex gap-5 justify-start items-center p-2 md:p-3 md:hover:scale-105 transition-all duration-300 ease-in-out">
+							<motion.div
+								className="text-white bg-black bg-opacity-90 flex gap-5 justify-start items-center p-2 md:p-3"
+								initial={{borderRadius: "10%"}}
+								transition={{
+									scale: {
+										delay: 0,
+										duration: 1,
+										type: "spring",
+										bounce: 0.6,
+									},
+									borderRadius: {
+										delay: 0,
+										duration: 1,
+										type: "spring",
+										bounce: 0.75,
+									},
+								}}
+								whileHover={{
+									scale: 1.1,
+									borderRadius: "47%",
+									transition: {delay: 0},
+								}}
+							>
 								<MdOpenInNew className="inline-block text-4xl" />
-							</div>
+							</motion.div>
 						</a>
 					)}
 
 					{github && (
 						<a href={github} target="_blank">
-							<div className="text-white bg-black bg-opacity-70 rounded-md md:hover:bg-opacity-100 flex gap-5 justify-start items-center p-2 md:p-3 md:hover:scale-105 transition-all duration-300 ease-in-out">
+							<motion.div
+								className="text-white bg-black bg-opacity-70 flex gap-5 justify-start items-center p-2 md:p-3"
+								initial={{borderRadius: "10%"}}
+								transition={{
+									scale: {
+										delay: 0,
+										duration: 1,
+										type: "spring",
+										bounce: 0.6,
+									},
+									borderRadius: {
+										delay: 0,
+										duration: 1,
+										type: "spring",
+										bounce: 0.75,
+									},
+								}}
+								whileHover={{
+									scale: 1.1,
+									borderRadius: "47%",
+									transition: {delay: 0},
+								}}
+							>
 								<FaGithub className="inline-block text-4xl" />
-							</div>
+							</motion.div>
 						</a>
 					)}
 				</div>

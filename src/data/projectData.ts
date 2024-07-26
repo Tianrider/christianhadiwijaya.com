@@ -40,7 +40,6 @@ const projectList: ProjectList[] = [
 				img: "https://res.cloudinary.com/djvdforcq/image/upload/v1718637279/Screenshot_2024-06-17_221416_nht4by.png",
 				description:
 					"A fun project me and my team do for Exercise FTUI 2024. It's a simple visual novel app built with react",
-				link: "https://cupids-click.vercel.app/",
 				github: "https://github.com/tianrider/Cupids_Click",
 			},
 		],
