@@ -10,7 +10,7 @@ const Gallery: React.FC = () => {
 		<div>
 			{reveal && <Reveal setReveal={setReveal} />}
 			<div className="columns-4 gap-4 space-y-3 p-[2vw] pb-10 pt-[15vh] md:pt-[23vh] md:p-20">
-				{imageList.map((image, index) => (
+				{imageList.map((image) => (
 					<img
 						className="h-auto max-w-full rounded-lg md:hover:shadow-xl transition-transform ease-out "
 						src={image.src}
@@ -19,20 +19,6 @@ const Gallery: React.FC = () => {
 					/>
 				))}
 			</div>
-			{/* <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-[2vw] pb-10 pt-[15vh] md:pt-[23vh] md:p-20">
-				{imageList.map((image, index) => (
-					<div key={index} className="grid gap-4">
-						<div>
-							<img
-								className="h-auto max-w-full rounded-lg md:hover:shadow-xl transition-transform ease-out "
-								src={image.src}
-								alt={image.alt}
-								onClick={() => setSelectedImage(image.src)}
-							/>
-						</div>
-					</div>
-				))}
-			</div> */}
 
 			{selectedImage && (
 				<div
