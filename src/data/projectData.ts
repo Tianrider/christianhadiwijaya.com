@@ -26,6 +26,15 @@ const projectList: ProjectList[] = [
 				tech: "React",
 			},
 			{
+				title: "MIPA Open House",
+				date: "Aug 2024",
+				img: "https://res.cloudinary.com/djvdforcq/image/upload/v1723537700/Projects/ufsw0bsmrzoaeyvyyhpr.png",
+				description:
+					"Event website that showcases details about the FMIPA UI 2024 Open House, including the event details and the faculty and its departments, while also functions as a payment platform for participants.",
+				tech: "React",
+				link: "https://mipaopenhouse.com",
+			},
+			{
 				title: "EZRA",
 				date: "June 2024",
 				img: "https://res.cloudinary.com/djvdforcq/image/upload/v1718637173/Copy_of_drop-down_1_odyhby.png",
@@ -34,6 +43,10 @@ const projectList: ProjectList[] = [
 				tech: "Node.js, Express.js, Mongoose",
 				github: "https://github.com/Tianrider/mrt-location_be",
 			},
+		],
+	},
+	{
+		data: [
 			{
 				title: "Cupid's Click",
 				date: "March 2024",
@@ -42,10 +55,6 @@ const projectList: ProjectList[] = [
 					"A fun project me and my team do for Exercise FTUI 2024. It's a simple visual novel app built with react",
 				github: "https://github.com/tianrider/Cupids_Click",
 			},
-		],
-	},
-	{
-		data: [
 			{
 				title: "Slither.io in C",
 				date: "May 2024",

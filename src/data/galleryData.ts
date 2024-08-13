@@ -9,16 +9,12 @@ const imageList: Image[] = [
 		alt: "Gallery image 1",
 	},
 	{
-		src: "https://res.cloudinary.com/djvdforcq/image/upload/v1718612945/Timi_Self_Photo_Studio_Jakarta_-_Depok_9_of_48_ngspjf.jpg",
-		alt: "Gallery image 10",
-	},
-	{
-		src: "https://res.cloudinary.com/djvdforcq/image/upload/v1718612826/IMG_5173_ddjdwd.jpg",
-		alt: "Gallery image 8",
-	},
-	{
 		src: "https://res.cloudinary.com/djvdforcq/image/upload/v1718612851/IMG_5174_wsoafe.jpg",
 		alt: "Gallery image 11",
+	},
+	{
+		src: "https://res.cloudinary.com/djvdforcq/image/upload/v1723539067/Porto%20Gallery/wgumitxyndc1usp7ltst.jpg",
+		alt: "hackjakarta",
 	},
 	{
 		src: "https://res.cloudinary.com/djvdforcq/image/upload/v1718612849/IMG_4342_yaez2h.jpg",
@@ -29,8 +25,16 @@ const imageList: Image[] = [
 		alt: "Gallery image 4",
 	},
 	{
+		src: "https://res.cloudinary.com/djvdforcq/image/upload/v1723539082/Porto%20Gallery/kgjfvjwbknvwblmefqxo.jpg",
+		alt: "bca",
+	},
+	{
 		src: "https://res.cloudinary.com/djvdforcq/image/upload/v1718612855/IMG_3792_a3k5gm.jpg",
 		alt: "Gallery image 5",
+	},
+	{
+		src: "https://res.cloudinary.com/djvdforcq/image/upload/v1718612826/IMG_5173_ddjdwd.jpg",
+		alt: "Gallery image 8",
 	},
 	{
 		src: "https://res.cloudinary.com/djvdforcq/image/upload/v1718612878/IMG_4704_ey5zxo.jpg",
@@ -45,6 +49,10 @@ const imageList: Image[] = [
 		alt: "Gallery image 12",
 	},
 	{
+		src: "https://res.cloudinary.com/djvdforcq/image/upload/v1718612945/Timi_Self_Photo_Studio_Jakarta_-_Depok_9_of_48_ngspjf.jpg",
+		alt: "Gallery image 10",
+	},
+	{
 		src: "https://res.cloudinary.com/djvdforcq/image/upload/v1718612860/IMG_4801_b1peqk.jpg",
 		alt: "Gallery image 9",
 	},
@@ -55,6 +63,14 @@ const imageList: Image[] = [
 	{
 		src: "https://res.cloudinary.com/djvdforcq/image/upload/v1718612895/IMG_4296_bqlrpi.jpg",
 		alt: "Gallery image 2",
+	},
+	{
+		src: "https://res.cloudinary.com/djvdforcq/image/upload/v1723539009/Porto%20Gallery/hxggwo4ioqclrbt48exm.jpg",
+		alt: "Satis",
+	},
+	{
+		src: "https://res.cloudinary.com/djvdforcq/image/upload/v1723539081/Porto%20Gallery/wzetbbbthkwburahreln.jpg",
+		alt: "car",
 	},
 ];
 

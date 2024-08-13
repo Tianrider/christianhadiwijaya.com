@@ -56,6 +56,19 @@ function SwiperFunc() {
 						/>
 					</a>
 				</SwiperSlide>
+				<SwiperSlide className="flex justify-center items-center h-full align-center">
+					<a
+						className="h-full w-[90dvw] md:w-[55vw]"
+						href="https://mipaopenhouse.com"
+						target="_blank"
+					>
+						<img
+							src="https://res.cloudinary.com/djvdforcq/image/upload/v1723537700/Projects/ufsw0bsmrzoaeyvyyhpr.png"
+							alt="Slide 2"
+							className="object-cover h-full w-full"
+						/>
+					</a>
+				</SwiperSlide>
 				<SwiperSlide className="flex justify-center items-center align-center">
 					<a
 						className="h-full w-[90dvw] md:w-[55vw]"

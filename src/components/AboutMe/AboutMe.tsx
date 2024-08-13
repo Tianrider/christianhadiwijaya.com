@@ -29,6 +29,18 @@ function aboutMe() {
 					</div>
 
 					<div>
+						<h1 className="text-[5vw] w-[60vw] md:w-full md:text-[30px] font-bold opacity-[0.77]">
+							Digital Laboratory DTE UI
+						</h1>
+						<div className="md:text-end flex flex-col md:flex-row md:gap-4 md:items-center md:justify-end">
+							<p className="font-sans opacity-[0.66] text-xl pt-[2px]">
+								2024 - Present
+							</p>
+							<p className="text-2xl">Lab Asisstant</p>
+						</div>
+					</div>
+
+					<div>
 						<h1 className="md:text-end text-[5vw] w-[60vw] md:w-full md:text-[30px] font-bold opacity-[0.77]">
 							Exercise FTUI
 						</h1>
