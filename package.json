@@ -12,6 +12,7 @@
   "dependencies": {
     "@rive-app/react-canvas": "^4.11.3",
     "@types/scrollmagic": "^2.0.8",
+    "firebase": "^10.13.2",
     "framer-motion": "^11.2.10",
     "gsap": "^3.12.5",
     "react": "^18.2.0",

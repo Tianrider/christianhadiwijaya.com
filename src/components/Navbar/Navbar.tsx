@@ -37,6 +37,8 @@ function Navbar({showNav, setShowNav}: NavbarProps) {
 				className={`fixed ${
 					topOfScreen
 						? "bg-transparent  md:p-10"
+						: showNav
+						? "bg-transparent py-1 md:pt-0 shadow-md"
 						: "bg-white py-1 md:pt-0 shadow-md"
 				}
 					${
