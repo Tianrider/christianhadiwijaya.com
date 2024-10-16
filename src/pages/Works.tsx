@@ -1,16 +1,40 @@
-import {useState, useRef} from "react";
+import {useState, useEffect, useRef} from "react";
 import WorksImgLeft from "../components/Works/WorksImg";
-import worksData from "../data/projectData";
 import {motion} from "framer-motion";
 import Reveal from "../components/Reveal/Reveal";
 import {FaArrowLeft, FaArrowRight} from "react-icons/fa";
+import {firestore} from "../utils/firebase";
+import {collection, query, orderBy, getDocs} from "firebase/firestore";
+
+interface Project {
+	title: string;
+	date: string;
+	img: string;
+	description: string;
+	link?: string;
+	github?: string;
+	tech?: string;
+}
+
+interface ProjectList {
+	data: Project[];
+}
+
+interface Work {
+	title: string;
+	date: string;
+	img: string;
+	description: string;
+	link?: string;
+	github?: string;
+	tech?: string;
+}
 
 function Works() {
 	const [reveal, setReveal] = useState(true);
+	const [works, setWorks] = useState<Work[]>([]);
 	const [selected, setSelected] = useState(0);
-
-	// Get selected works length
-	const selectedLength = worksData.length;
+	const [isLoading, setIsLoading] = useState(true);
 
 	// Ref for the top of works section
 	const topOfWorksRef = useRef<HTMLDivElement>(null);
@@ -25,6 +49,46 @@ function Works() {
 		}
 	};
 
+	const fetchWorks = async () => {
+		const worksRef = collection(firestore, "projects"); // Replace "works" with your Firestore collection name
+		const q = query(worksRef, orderBy("date", "asc"));
+
+		const querySnapshot = await getDocs(q);
+
+		const worksData: Project[] = [];
+		querySnapshot.forEach((doc) => {
+			console.log(doc.data());
+			const data = doc.data();
+			worksData.push({
+				title: data.title,
+				date: data.date,
+				img: data.img,
+				description: data.description,
+				link: data.link,
+				github: data.github,
+				tech: data.tech,
+			});
+		});
+
+		// Group the works into arrays of 3
+		const groupedWorks: ProjectList[] = [];
+		for (let i = 0; i < worksData.length; i += 3) {
+			groupedWorks.push({
+				data: worksData.slice(i, i + 3),
+			});
+		}
+
+		console.log(groupedWorks);
+		setWorks(groupedWorks.flatMap((group) => group.data));
+		setIsLoading(false);
+
+		return groupedWorks;
+	};
+
+	useEffect(() => {
+		fetchWorks();
+	}, []);
+
 	const handleLeftClick = () => {
 		if (selected > 0) {
 			setSelected(selected - 1);
@@ -33,7 +97,7 @@ function Works() {
 	};
 
 	const handleRightClick = () => {
-		if (selected < selectedLength - 1) {
+		if (selected < works.length - 1) {
 			setSelected(selected + 1);
 			scrollToTop();
 		}
@@ -46,7 +110,7 @@ function Works() {
 
 	return (
 		<div className="mb-20">
-			{reveal && <Reveal setReveal={setReveal} />}
+			{reveal && <Reveal setReveal={setReveal} isLoading={isLoading} />}
 
 			<div className="flex flex-col font-bitter mb-44 h-full pt-[40vh] px-[6vw]">
 				<motion.p
@@ -75,7 +139,7 @@ function Works() {
 
 			<div id="top-of-works" ref={topOfWorksRef}></div>
 
-			{worksData[selected].data.map((work, index) => (
+			{works.slice(selected * 3, selected * 3 + 3).map((work, index) => (
 				<WorksImgLeft
 					key={index}
 					title={work.title}
@@ -99,15 +163,14 @@ function Works() {
 					onClick={handleLeftClick}
 				/>
 
-				{Array.from({length: selectedLength}, (_, i) => (
+				{Array.from({length: Math.ceil(works.length / 3)}, (_, i) => (
 					<div
 						key={i}
-						className={`p-3 px-5 cursor-pointer hover:bg-gray-200 hover:bg-opacity-50 rounded-lg 
-                            ${
-								i === selected &&
-								`bg-black bg-opacity-20 rounded-lg`
-							}`}
-						onClick={() => handleSelect(i)}
+						className={`p-3 px-5 cursor-pointer hover:bg-gray-200 hover:bg-opacity-50 rounded-lg ${
+							i === selected &&
+							`bg-black bg-opacity-20 rounded-lg`
+						}`}
+						onClick={() => handleSelect(i * 3)}
 					>
 						{i + 1}
 					</div>
@@ -115,7 +178,7 @@ function Works() {
 
 				<FaArrowRight
 					className={`mx-3 ${
-						selected === selectedLength - 1
+						selected >= works.length - 3
 							? "opacity-30 cursor-default"
 							: "opacity-100 cursor-pointer"
 					}`}

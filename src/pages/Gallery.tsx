@@ -47,7 +47,7 @@ const Gallery: React.FC = () => {
 	return (
 		<div>
 			{reveal && <Reveal setReveal={setReveal} />}
-			<div className="columns-4 gap-4 space-y-3 p-[2vw] pb-10 pt-[15vh] md:pt-[23vh] md:p-20">
+			<div className="columns-2 md:columns-4 gap-4 space-y-3 p-[2vw] pb-10 pt-[15vh] md:pt-[23vh] md:p-20">
 				{imageList.map((image, index) => (
 					<img
 						key={index}

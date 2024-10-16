@@ -41,7 +41,7 @@ const projectList: ProjectList[] = [
 				description:
 					"EZRA (EZ Emergency Assistant) is a iot project that helps people with disabilities to call for help in MRT stations when they are in danger or need help.",
 				tech: "Node.js, Express.js, Mongoose",
-				github: "https://github.com/Tianrider/mrt-location_be",
+				github: "	",
 			},
 		],
 	},
